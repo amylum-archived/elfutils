@@ -9,8 +9,8 @@ deps(
     checksum: '5596e2d39ef98e2323ac415f50afa71a433ed65c23e8d1f2723f711f5ffb4f32'
   },
   libargp: {
-    version: '1.2-1',
-    checksum: 'a'
+    version: '1.3-1',
+    checksum: '739c88aff38b908e5037ad4dec857969fe26424c83c659cf62e9b372279aa53f'
   }
 )
 
