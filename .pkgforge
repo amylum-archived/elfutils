@@ -1,0 +1,32 @@
+name 'elfutils'
+org 'amylum'
+
+license 'COPYING'
+
+deps(
+  zlib: {
+    version: '1.2.11-1',
+    checksum: '5596e2d39ef98e2323ac415f50afa71a433ed65c23e8d1f2723f711f5ffb4f32'
+  },
+  libargp: {
+    version: '1.2-1',
+    checksum: 'a'
+  }
+)
+
+configure_flags(
+  prefix: '/usr',
+)
+cflags
+harden
+
+build do
+  run 'autoreconf -i -f'
+  configure
+  make
+  install
+end
+
+test do
+  # TODO: add tests
+end

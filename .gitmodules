@@ -1,0 +1,6 @@
+[submodule "upstream"]
+	path = upstream
+	url = git://sourceware.org/git/elfutils.git
+[submodule "meta"]
+	path = meta
+	url = git://github.com/amylum/pkgforge-helper
