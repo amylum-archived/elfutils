@@ -16,9 +16,12 @@ deps(
 
 configure_flags(
   prefix: '/usr',
+  'enable-maintainer-mode': nil
 )
 cflags
 harden
+
+patch 'musl.patch'
 
 build do
   run 'autoreconf -i -f'
