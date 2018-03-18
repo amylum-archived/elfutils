@@ -1,3 +1,15 @@
+diff --git a/lib/fixedsizehash.h b/lib/fixedsizehash.h
+index dac2a5f5..43016fc3 100644
+--- a/lib/fixedsizehash.h
++++ b/lib/fixedsizehash.h
+@@ -30,7 +30,6 @@
+ #include <errno.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <sys/cdefs.h>
+ 
+ #include <system.h>
+
 --- a/libelf/elf.h	2015-08-21 14:22:37.000000000 +0200
 +++ b/libelf/elf.h	2015-11-20 04:54:33.948081321 +0100
 @@ -21,6 +21,17 @@

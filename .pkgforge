@@ -11,22 +11,40 @@ deps(
   libargp: {
     version: '1.3-1',
     checksum: '739c88aff38b908e5037ad4dec857969fe26424c83c659cf62e9b372279aa53f'
+  },
+  fts: {
+    version: '1.2.7-1',
+    checksum: '93b98d9167dd79de2bc47be61617a9c5f9837f4d9a7ffc27e75183cb0a760b63'
+  },
+  obstack: {
+    version: '1.1-1',
+    checksum: 'c399085201ed4583d8f46ef9930cb7b0b5fa1ec513abb34e9d715b249f3231f0'
   }
 )
 
 configure_flags(
   prefix: '/usr',
+  host: 'x86_64-unknown-linux-gnu',
   'enable-maintainer-mode': nil
 )
 cflags
+cflags(['-lfts', '-lobstack', '-lz'])
+cflags(['-Wno-null-dereference'])
 harden
 
-patch 'musl.patch'
+patch 'musl-error.patch'
 patch 'musl-cdefs.patch'
+patch 'musl-strerror.patch'
+patch 'musl-canonicalize_file_name.patch'
+patch 'musl-qsort_r.patch'
+patch 'musl-macros.patch'
 
 build do
   run 'autoreconf -i -f'
   configure
+  run 'cd lib && make', default_env
+  run 'cd libcpu && make i386_parse.o i386_gendis.o i386_lex.o'
+  run 'cd libcpu && gcc -o i386_gendis i386_gendis.o i386_lex.o i386_parse.o ../lib/libeu.a -lm'
   make
   install
 end
