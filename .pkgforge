@@ -30,6 +30,7 @@ configure_flags(
 cflags
 cflags(['-lfts', '-lobstack', '-lz'])
 cflags(['-Wno-null-dereference'])
+cflags(['-Wno-error=packed-not-aligned'])
 harden
 
 patch 'musl-error.patch'
