@@ -8,7 +8,7 @@ item do
   expected do
     url_xpath
     url 'https://sourceware.org/elfutils/ftp/?C=M;O=D'
-    xpath '/html/body/table/tr[7]/td[2]/a'
+    xpath '/html/body/table/tr[6]/td[2]/a'
     regex /^([\d.]+)\/$/
   end
 
