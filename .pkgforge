@@ -36,7 +36,6 @@ harden
 patch 'musl-error.patch'
 patch 'musl-cdefs.patch'
 patch 'musl-strerror.patch'
-patch 'musl-canonicalize_file_name.patch'
 patch 'musl-qsort_r.patch'
 patch 'musl-macros.patch'
 
