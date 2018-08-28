@@ -1,7 +1,7 @@
 elfutils
 ==========
 
-[![Build Status](https://img.shields.io/circleci/project/amylum/elfutils/master.svg)](https://circleci.com/gh/amylum/elfutils)
+[![Build Status](https://img.shields.io/travis/com/amylum/elfutils.svg)](https://travis-ci.com/amylum/elfutils)
 [![GitHub release](https://img.shields.io/github/release/amylum/elfutils.svg)](https://github.com/amylum/elfutils/releases)
 [![GPLv3 Licensed](https://img.shields.io/badge/license-GPLv3-green.svg)](https://www.tldrlegal.com/l/gpl-3.0)
 
